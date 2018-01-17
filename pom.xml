@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+     <!-- idea中用maven搭建了一个project，在project中有两个Module，那么这个Module中的共同的依赖包就可以放在project中的pom.xml文件中 -->
+    <groupId>cn.roye.security</groupId>
+    <artifactId>roye.security</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>roye-security</module>
+        <module>roye-security-app</module>
+        <module>roye-security-broswer</module>
+        <module>roye-security-core</module>
+        <module>roye-security-demo</module>
+    </modules>
+
+
+    <!-- 加入 bom(bill of material) 的作用就是， 解决pom 文件中各个jar 文件之间版本的依赖不匹配的问题， bom 提供了
+         最优的配置
+    -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.spring.platform</groupId>
+                <artifactId>platform-bom</artifactId>
+                <version>Brussels-SR6</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Dalston.SR5</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!-- maven 下的 setting.xml 存在于两个地方，一个是maven/config/setting.xml 一个是
+    用户目录下的.m2/setting.xml
+    -->
+
+    <!-- 指定编译的版本 -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.8</source>
+                    <source>1.8</source>
+                    <encoding>utf-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

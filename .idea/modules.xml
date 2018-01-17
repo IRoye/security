@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/roye-security/roye-security.iml" filepath="$PROJECT_DIR$/roye-security/roye-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roye-security-app/roye-security-app.iml" filepath="$PROJECT_DIR$/roye-security-app/roye-security-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roye-security-broswer/roye-security-broswer.iml" filepath="$PROJECT_DIR$/roye-security-broswer/roye-security-broswer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roye-security-core/roye-security-core.iml" filepath="$PROJECT_DIR$/roye-security-core/roye-security-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roye-security-demo/roye-security-demo.iml" filepath="$PROJECT_DIR$/roye-security-demo/roye-security-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/security.iml" filepath="$PROJECT_DIR$/security.iml" />
+    </modules>
+  </component>
+</project>
