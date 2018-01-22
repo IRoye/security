@@ -16,7 +16,10 @@
         <module>roye-security-demo</module>
     </modules>
 
-
+     <properties>
+         <!--声明pom的变量-->
+         <security.version>1.0-SNAPSHOT</security.version>
+     </properties>
     <!-- 加入 bom(bill of material) 的作用就是， 解决pom 文件中各个jar 文件之间版本的依赖不匹配的问题， bom 提供了
          最优的配置
     -->

@@ -11,5 +11,13 @@
 
     <artifactId>roye-security-app</artifactId>
 
+    <dependencies>
+        <!-- 也就是将在core里面定义的引用拿过来-->
+        <dependency>
+            <artifactId>roye-security-core</artifactId>
+            <groupId>cn.roye.security</groupId>
+            <version>${security.version}</version>
+        </dependency>
+    </dependencies>
 
 </project>
