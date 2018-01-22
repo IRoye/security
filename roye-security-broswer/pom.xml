@@ -19,6 +19,7 @@
             <version>${security.version}</version>
         </dependency>
 
+        <!-- 作用是做一个session的集群管理-->
         <dependency>
             <groupId>org.springframework.session</groupId>
             <artifactId>spring-session</artifactId>
