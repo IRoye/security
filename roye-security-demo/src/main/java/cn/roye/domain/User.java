@@ -1,5 +1,6 @@
 package cn.roye.domain;
 
+import cn.roye.validate.Myconstraint;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.validation.constraints.Past;
@@ -7,6 +8,7 @@ import java.util.Date;
 
 public class User {
 
+    @Myconstraint(message = "hahahhahahahahhah !")
     private String username;
 
     // 不能为null, 并且size > 0
