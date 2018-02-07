@@ -6,6 +6,7 @@ import cn.roye.dto.UserCondition;
 import org.apache.commons.lang.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang.builder.ToStringStyle;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 import sun.misc.Request;
 
@@ -53,7 +54,11 @@ public class UserController {
     public User createUser(@Valid @RequestBody User user, BindingResult errors){
 
         if(errors.hasErrors()){
-            errors.getAllErrors().stream().forEach(error -> System.out.println(error.getDefaultMessage()));
+            errors.getAllErrors().stream().forEach(error -> {
+                FieldError fieldError = (FieldError) error;
+                System.out.println("字段:" + fieldError.getField() + "   "+error.getDefaultMessage());
+                    }
+            );
         }
 
         user.setAge("16");

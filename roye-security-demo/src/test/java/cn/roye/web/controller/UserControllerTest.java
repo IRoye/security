@@ -15,6 +15,8 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.Date;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -65,7 +67,10 @@ public class UserControllerTest {
      */
     @Test
     public void whenCreateSuccess() throws Exception {
-        Date date = new Date();
+        //Date date = new Date();
+        // 拿到一年以后的时间
+        Date date = new Date(LocalDateTime.now()
+                .plusYears(1).atZone(ZoneId.systemDefault()).toInstant().toEpochMilli());
         // 要用时间戳的形式；
         System.out.println(date.getTime());
         String content = "{ \"username\" : \"tom\", \"age\": null, \"birthday\": "+date.getTime()+"}";
